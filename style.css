@@ -1,0 +1,142 @@
+:root{
+    --body-bg-color: #dce4e3;
+    --green: #18c29c;
+    --light-green: #8ed7c6;
+    --light-grey: #dce4e3;
+    --text-color: #084236;
+}
+
+
+body{
+    margin: 0;
+}
+
+aside{
+    width: 78px;
+    height: 100vh;
+    background: var(--green);
+    display: flex;
+    flex-direction: column;
+    transition: ease-in-out .3s;
+}
+
+#btn_toggle{
+    cursor: pointer;
+}
+
+/*======= closed ======*/
+
+aside span, img.logo, .log-out .info-log{
+    visibility: hidden;
+    display: none;
+    transition: ease-in-out .3s;
+}
+
+.menu img{
+    height: 24px;
+    width: 24px;
+}
+
+.menu{
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 26px;
+    gap: 34px;
+    transition: ease-in-out .3s;
+}
+
+.menu div:nth-child(2){
+    height: 50px;
+    width: 50px;
+    background-color: var(--light-grey);
+    transition: ease-in-out .3s;
+}
+
+.item{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px;
+    border-radius: 12px;
+    transition: ease-in-out .3s;
+}
+
+.log-out{
+    flex-basis: 60px;
+    background: var(--light-green);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: ease-in-out .3s;
+}
+
+/*===== opened =====*/
+
+aside.open{
+    width: 250px;
+}
+
+aside.open span{
+    visibility: visible;
+    display: inline;
+}
+
+
+aside.open .menu img.logo{
+    visibility: visible;
+    display: block;
+    height: 25.12px;
+    width: 64px;
+    margin-left: 21px;
+}
+
+aside.open .toggle{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 14px;
+}
+
+aside.open .item{
+    width: 222px;
+    justify-content: start;
+    padding-left: 13px;
+    margin: 0 27px 0 27px;
+    align-items: center;
+    gap: 13px;
+}
+
+aside.open .log-out img:first-child{
+    width: 45px;
+    height: 45px;
+    border-radius: 12px;
+}
+
+aside.open .log-out{
+    justify-content: space-around;
+}
+
+aside.open .info-log{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 9px;
+    visibility: visible;
+}
+
+/*====== main ======*/
+main{
+    display: flex;
+    color: var(--text-color);
+    font-family: 'Poppins', sans-serif;
+}
+
+main h2{
+    margin-left: 20px;
+}
+
+
+
